@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { Home } from "./Common/components/Routes/Home/home";
-import { Posts } from "./Common/components/Routes/Posts/posts";
+import { Home } from "./components/Routes/Home/home";
+import { Posts } from "./components/Routes/Posts/posts";
 
 
 export const App: FC = () => {
