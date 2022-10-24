@@ -1,14 +1,15 @@
-import { link } from "fs";
 import { FC } from "react"
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+import { colorStack } from "../../style/colorStack";
 import { Posts } from "../Routes/Posts/posts";
+import { SomeSpan } from "./Components";
 
 const Wrapper = styled.div`
-    border: 10px solid ${stackColor.black}l
+    border: 10px solid ${colorStack.black}l
 `;
 
-const SecondSpan = styled(Posts)`
+const SecondSpan = styled(SomeSpan)`
     border: 3px solid yellow;
 `;
 
@@ -19,6 +20,9 @@ const ExampleDiv = styled.div<{isActive: boolean}>`
     `}
 `;
 
+const NewLink= styled(Link)`
+
+`;
 
 export const Menu: FC = () => {
     return(
