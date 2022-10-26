@@ -8,7 +8,9 @@ export const GlobalStyle = createGlobalStyle`
         font-size:16px;
     }
     body{
-        background: #060604;
+        margin: 0;
+        padding: 0;
+        background: ${colorStack.black};
         overflow:hidden;
         heigh:100vh;
         font-family:'Roboto', sans-serif;

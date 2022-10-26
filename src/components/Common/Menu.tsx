@@ -5,12 +5,36 @@ import { colorStack } from "../../style/colorStack";
 import { Posts } from "../Routes/Posts/posts";
 import { SomeSpan } from "./Components";
 
+
+const Container = styled.div`
+    background: #2b2e39;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 14px;
+    border-radius: 14px;
+    margin-top: 14px;
+
+`;
+
+
+
+const Button = styled.button`
+    
+`
+
 const Wrapper = styled.div`
-    border: 10px solid ${colorStack.black}l
+    border: 3px solid ${colorStack.wheat}    
+    
+    
 `;
 
 const SecondSpan = styled(SomeSpan)`
-    border: 3px solid yellow;
+    align-content: center;
+    font-size: 30px;
+    color: #f5deb3;
+    
+    
 `;
 
 const ExampleDiv = styled.div<{isActive: boolean}>`
@@ -21,17 +45,21 @@ const ExampleDiv = styled.div<{isActive: boolean}>`
 `;
 
 const NewLink= styled(Link)`
-
+    
 `;
 
 export const Menu: FC = () => {
     return(
-        <Wrapper>
-            <SecondSpan>abcdeefgascxz</SecondSpan>
+        <Container>
+        <Link to="posts">Posts  </Link>            
+        <Link to="/">Home</Link>
+        <SecondSpan>Panel logowania</SecondSpan>
+        <Wrapper>            
             <ExampleDiv isActive> div </ExampleDiv>
             <ExampleDiv isActive={false}> div2 </ExampleDiv>
-            <Link to="posts">Posts</Link>
-            <Link to="/">Home</Link>
+            
         </Wrapper>
+        <Button>Zarejestruj</Button>
+        </Container>
     )
 }
